@@ -1,4 +1,4 @@
- * @Library: RW_Lockers
+ * @Library: RW_Lokers
  * @author:  Mihai-Daniel Surcea
  * @date:    20.12.2019
  * @Subject: Operating Systems
@@ -6,7 +6,7 @@
 
 This library is used to sincronize multiple readers and writers in the same buffer or memory zone (or any resources)
 
-the compile command structure is: gcc -o [executableName] -pthread [fileUsingLibrary.c] RW_Lockers.c
+the compile command structure is: gcc -o [executableName] -pthread [fileUsingLibrary.c] RW_Lokers.c
 
 This file contains a test which doesn't really uses any resources, but simulates it using sleep (the supposed time for that specific action)
 
