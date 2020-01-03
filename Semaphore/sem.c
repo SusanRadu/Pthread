@@ -29,7 +29,7 @@ int my_sem_wait(my_sem_t *sem) {
 		if (sem->sem_value > 0){ // busy waiting. wait until there is a free spot
 			pthread_mutex_lock(&sem->mtx); // make sure you are the only one changing the semaphore counter
 			if (sem->sem_value > 0){ // check again if there is room for you. maybe another thread took your spot
-				                     // (you both passed the if statement with the sem_value being 1 and the other one locked the mutex first)
+				                 // (you both passed the if statement with the sem_value being 1 and the other one locked the mutex first)
 				sem->sem_value--;
 				pthread_mutex_unlock(&sem->mtx);
 				return 1;
