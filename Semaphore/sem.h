@@ -1,3 +1,11 @@
+/*
+* - Library: Semaphore
+* - author: Radu Dilirici
+* - date: 03.01.2020
+* - Subject: Operating Systems
+* - University of Bucharest, Faculty of Mathematics and Computer Science
+*/
+
 #ifndef _SEM_H_
 #define _SEM_H_
 #include <pthread.h>

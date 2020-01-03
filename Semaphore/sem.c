@@ -1,3 +1,11 @@
+/*
+* - Library: Semaphore
+* - author: Radu Dilirici
+* - date: 03.01.2020
+* - Subject: Operating Systems
+* - University of Bucharest, Faculty of Mathematics and Computer Science
+*/
+
 #include "sem.h"
 
 void my_sem_init(my_sem_t *sem, unsigned int starting_value) {

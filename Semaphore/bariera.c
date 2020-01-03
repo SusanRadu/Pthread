@@ -1,3 +1,13 @@
+/*
+* - Library: Semaphore
+* - author: Radu Dilirici
+* - date: 03.01.2020
+* - Subject: Operating Systems
+* - University of Bucharest, Faculty of Mathematics and Computer Science
+* - compile command: gcc bariera.c sem.c -o bariera -pthread
+* - run with: bariera [no of threads]
+*/
+
 #include <pthread.h>
 #include <errno.h>
 #include <stdio.h>
@@ -40,7 +50,7 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 	mx = atoi(argv[1]);
-	
+
 	my_sem_init(&sem, 0);
 	if (pthread_mutex_init(&mtx, NULL)){
 		perror(NULL);
