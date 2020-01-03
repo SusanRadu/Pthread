@@ -1,10 +1,10 @@
-- Library: semaphore
+- Library: Semaphore
 - author: Radu Dilirici
 - date: 03.01.2020
 - Subject: Operating Systems
 - University of Bucharest, Faculty of Mathematics and Computer Science
 
-This library is used to synchronize multiple threads that share the same (finite) resources.daskhdj
+This library is used to synchronize multiple threads that share the same (finite) resources.
 
 The compile structure is: gcc [your C file] sem.c -o [the name for the executable] -pthread
 
