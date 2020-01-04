@@ -8,35 +8,24 @@
 
 #include "sem.h"
 
-void my_sem_init(my_sem_t *sem, unsigned int starting_value) {
-	sem->sem_value = starting_value;
-	pthread_mutex_init(&sem->mtx, NULL);
-}
-
-void my_sem_destroy(my_sem_t *sem) {
-	pthread_mutex_destroy(&sem->mtx);
+// returns 1 on success and 0 on failure
+int my_sem_init(my_sem_t *sem, int starting_value) {
+	if (starting_value < 0){
+		return 0;
+	}
+	atomic_store(&sem->sem_value, starting_value);
+	return 1;
 }
 
 void my_sem_post(my_sem_t *sem) {
-	pthread_mutex_lock(&sem->mtx);
-	sem->sem_value++; 
-	pthread_mutex_unlock(&sem->mtx);
+	sem->sem_value++;  // sem_value is of type atomic_int so this will execute atomically
 }
 
-// returns 1 on success,  and 0 on failure
+// returns 1 on success and 0 on failure
 int my_sem_wait(my_sem_t *sem) {
 	while (1) {
-		if (sem->sem_value > 0){ // busy waiting. wait until there is a free spot
-			pthread_mutex_lock(&sem->mtx); // make sure you are the only one changing the semaphore counter
-			if (sem->sem_value > 0){ // check again if there is room for you. maybe another thread took your spot
-				                 // (you both passed the if statement with the sem_value being 1 and the other one locked the mutex first)
-				sem->sem_value--;
-				pthread_mutex_unlock(&sem->mtx);
-				return 1;
-			}
-			else {
-				pthread_mutex_unlock(&sem->mtx);
-			}
+		if (atomic_dec_if_positive(&sem->sem_value)){  // even though the variabile is atomic,
+			return 1;                                  // I need to [check if it is greater than 0 and substract 1 if so] atomically
 		}
 	}
 	return 0;

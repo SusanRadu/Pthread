@@ -75,9 +75,9 @@ int main(int argc, char *argv[])
 			return errno;
 		}
 	}
+	printf("leftover: %d\n", crt);
 
 	pthread_mutex_destroy(&mtx);
-	my_sem_destroy(&sem);
 	free(threads);
 	free(ids);
 }
