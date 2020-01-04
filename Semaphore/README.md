@@ -1,4 +1,4 @@
-- Library: Semaphore
+- Library: semaphore
 - author: Radu Dilirici
 - date: 04.01.2020
 - Subject: Operating Systems
