@@ -1,9 +1,10 @@
 /*
-* - Library: Semaphore
+* - Test for the library "semaphore"
 * - author: Radu Dilirici
 * - date: 04.01.2020
 * - Subject: Operating Systems
 * - University of Bucharest, Faculty of Mathematics and Computer Science
+*
 * - compile command: gcc bariera.c sem.c atomic.c -o bariera -pthread
 * - run with: bariera [no of threads]
 */

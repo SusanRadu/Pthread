@@ -1,7 +1,7 @@
 /*
-* - Library: Semaphore
+* - Library: atomic
 * - author: Radu Dilirici
-* - date: 03.01.2020
+* - date: 04.01.2020
 * - Subject: Operating Systems
 * - University of Bucharest, Faculty of Mathematics and Computer Science
 */
