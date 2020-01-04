@@ -25,7 +25,7 @@ void my_sem_post(my_sem_t *sem) {
 int my_sem_wait(my_sem_t *sem) {
 	while (1) {
 		if (atomic_dec_if_positive(&sem->sem_value)){  // even though the variabile is atomic,
-			return 1;                                  // I need to [check if it is greater than 0 and substract 1 if so] atomically
+			return 1;                              // I need to [check if it is greater than 0 and substract 1 if so] atomically
 		}
 	}
 	return 0;
