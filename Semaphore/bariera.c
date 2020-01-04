@@ -4,7 +4,7 @@
 * - date: 03.01.2020
 * - Subject: Operating Systems
 * - University of Bucharest, Faculty of Mathematics and Computer Science
-* - compile command: gcc bariera.c sem.c -o bariera -pthread
+* - compile command: gcc bariera.c sem.c atomic.c -o bariera -pthread
 * - run with: bariera [no of threads]
 */
 
