@@ -1,3 +1,11 @@
+/*
+* - Library: mutex
+* - author: Radu Susan
+* - date: 08.01.2020
+* - Subject: Operating Systems
+* - University of Bucharest, Faculty of Mathematics and Computer Science
+*/
+
 #include "mutex.h"
 
 int my_mux_init(my_mux *mux)
