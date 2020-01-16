@@ -1,3 +1,14 @@
+/*
+* - Test for the library "Mutex"
+* - author: Radu Susan
+* - date: 08.01.2020
+* - Subject: Operating Systems
+* - University of Bucharest, Faculty of Mathematics and Computer Science
+
+* - compile command: gcc bariera.c mutex.c atomic.c -o bariera -pthread
+* - run with: ./bariera
+*/
+
 #include <stdatomic.h>
 #include <sys/types.h>
 #include <stdio.h>
