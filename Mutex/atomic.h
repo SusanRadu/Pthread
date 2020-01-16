@@ -6,8 +6,8 @@
 * - University of Bucharest, Faculty of Mathematics and Computer Science
 */
 
-#ifdef _ATMOIC_H_
-#define _ATMOIC_H_
+#ifndef _ATOMIC_H_
+#define _ATOMIC_H_
 
 #include <stdatomic.h>
 
