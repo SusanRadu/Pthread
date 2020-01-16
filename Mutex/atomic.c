@@ -7,6 +7,7 @@
 */
 
 #include "atomic.h"
+#include <stdatomic.h>
 //atomic function to check and lock the mutex
 int atomic_lock(atomic_int *x)
 {
