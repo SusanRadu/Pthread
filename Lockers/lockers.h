@@ -1,6 +1,6 @@
 /*
 * - Library: lockers
-* - authors: Radu Dilirici, Radu Susan, Surcea Mihai-Daniel
+* - authors: Surcea Mihai-Daniel, Radu Dilirici, Radu Susan
 * - date: 16.01.2020
 * - Subject: Operating Systems
 * - University of Bucharest, Faculty of Mathematics and Computer Science
