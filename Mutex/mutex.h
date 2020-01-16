@@ -1,3 +1,11 @@
+/*
+* - Library: mutex
+* - author: Radu Susan
+* - date: 08.01.2020
+* - Subject: Operating Systems
+* - University of Bucharest, Faculty of Mathematics and Computer Science
+*/
+
 #ifndef _MUTEX_H_
 #define _MUTEX_H_
 
