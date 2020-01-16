@@ -15,10 +15,8 @@ int my_mux_init(my_mux *mux)
 
 int my_mux_lock(my_mux *mux)
 {
-
-  
-  if(atomic_lock(&mux->mux_value))
-     return 1;
+ if(atomic_lock(&mux->mux_value))
+    return 1;
 }
  
  return 0;
