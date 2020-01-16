@@ -7,6 +7,7 @@
 */
 
 #include "mutex.h"
+#include <stdatomic.h>
 
 int my_mux_init(my_mux *mux)
 {
